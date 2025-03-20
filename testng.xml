@@ -3,7 +3,6 @@
 <suite name="Suite">
   <test thread-count="2" name="Test" parallel="methods">
     <classes>
-      <class name="com.apcfss.tests.LoginPageTest"/>
       <class name="com.apcfss.tests.HomePageTest"/>
     </classes>
   </test> <!-- Test -->

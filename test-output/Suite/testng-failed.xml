@@ -3,13 +3,6 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="com.apcfss.tests.LoginPageTest">
-        <methods>
-          <include name="test1"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.apcfss.tests.LoginPageTest -->
       <class name="com.apcfss.tests.HomePageTest">
         <methods>
           <include name="setUp"/>

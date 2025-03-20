@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
+import com.apcfss.constants.FrameworkConstants;
+
 public class ReadPropertyFile {
 
 	private ReadPropertyFile(){
@@ -19,7 +21,7 @@ public class ReadPropertyFile {
 	{
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/config/FrameworkConfigurations.properties");
+			fis = new FileInputStream(FrameworkConstants.getConfigFilePath());
 			property.load(fis);
 			
 			//conversion of hash table to hashMap
