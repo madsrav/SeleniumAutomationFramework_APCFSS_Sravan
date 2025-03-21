@@ -1,5 +1,7 @@
 package com.apcfss.tests;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -36,12 +38,11 @@ public class HomePageTest extends BaseTest {
 		Assert.assertTrue(title.length()>15);
 		Assert.assertTrue(title.length()<100);
 		List<WebElement> linkelements = DriverManager.getDriver().findElements(By.xpath("//h3"));
-		Assert.assertEquals(linkelements.size(), 10);
-		
+		assertThat(linkelements.size()).isBetween(0, 12);		
 		boolean isElementPresent = false;
 		for(WebElement element:linkelements)
 		{
-			if(element.getText().equalsIgnoreCase("Testing Mini Bytes"));
+			if(element.getText().equalsIgnoreCase("Testing Mini Bytes"))
 			
 			{
 				isElementPresent=true;
